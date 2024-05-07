@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .conteiner {
+        max-width: 1532px;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+      }
+      .productCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 6px;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      }
+      .productCardHeader {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        padding-top: 10px;
+        padding-right: 14px;
+      }
+      .newBlock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        background-color: #e93232;
+        opacity: 0;
+      }
+      .cardHeadIcons {
+        display: flex;
+        justify-content: right;
+      }
+      .cardImg {
+        width: 94%;
+        margin-inline: auto;
+      }
+
+      .productCardMain {
+        padding-inline: 14px;
+      }
+      .productTitle {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 0;
+      }
+      .productReviews {
+        color: #999999;
+        font-weight: 400;
+      }
+      .productCardFooter {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 1fr;
+        align-items: end;
+        padding-inline: 14px;
+        padding-bottom: 10px;
+      }
+      .productPrice {
+        color: #060f42;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .productCurrency {
+        color: #060f42;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .buyBtn {
+        background-color: #06a56c;
+        color: white;
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      .buyBtn:hover {
+        background-color: #068e5c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <!-- <div class="productCard">
+        <div class="productCardHeader">
+          <div class="newBlock">Новинка</div>
+          <div class="cardHeadIcons">
+            <img src="./img/scalesIcon.svg" alt="" />
+            <img src="./img/likeIcon.svg" alt="" />
+          </div>
+        </div>
+        <img class="cardImg" src="./img/cardImg1.svg" alt="" />
+        <div class="productCardMain">
+          <p class="productTitle">
+            Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)
+          </p>
+          <span class="productReviews">Отзывов: 0</span>
+        </div>
+        <div class="productCardFooter">
+          <span class="productPrice">3500</span>
+          <span class="productCurrency">грн.</span>
+          <button class="buyBtn">КУПИТЬ</button>
+        </div>
+      </div> -->
+    </div>
+
+    <script>
+      const products = [
+        {
+          new: true,
+          imgSrc: "./img/cardImg1.svg",
+          productTitle: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+          reviews: 0,
+          productPrice: 3500,
+          productCurrency: "грн.",
+        },
+        {
+          new: true,
+          imgSrc: "./img/cardImg1.svg",
+          productTitle: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+          reviews: 0,
+          productPrice: 3500,
+          productCurrency: "грн.",
+        },
+        {
+          new: true,
+          imgSrc: "./img/cardImg1.svg",
+          productTitle: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+          reviews: 0,
+          productPrice: 3500,
+          productCurrency: "грн.",
+        },
+        {
+          new: true,
+          imgSrc: "./img/cardImg1.svg",
+          productTitle: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+          reviews: 0,
+          productPrice: 3500,
+          productCurrency: "грн.",
+        },
+        {
+          new: true,
+          imgSrc: "./img/cardImg1.svg",
+          productTitle: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+          reviews: 0,
+          productPrice: 3500,
+          productCurrency: "грн.",
+        },
+        {
+          new: true,
+          imgSrc: "./img/cardImg1.svg",
+          productTitle: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+          reviews: 0,
+          productPrice: 3500,
+          productCurrency: "грн.",
+        },
+      ];
+
+      function createProductCards() {
+        for (let i = 0; i < products.length; i++) {
+          const productCard = document.createElement("div");
+          productCard.className = "productCard";
+          productCard.id = "productCard" + i;
+          productCard.innerHTML = `<div id="productCardHeader${i}" class="productCardHeader">
+                                        <div id="newBlock${i}" class="newBlock">Новинка</div>
+                                        <div class="cardHeadIcons">
+                                            <img src="./img/scalesIcon.svg" alt="" />
+                                            <img src="./img/likeIcon.svg" alt="" />
+                                        </div></div>
+                                    <img class="cardImg" src="${products[i].imgSrc}" alt="" />
+                                    <div class="productCardMain">
+                                        <p class="productTitle">${products[i].productTitle}</p>
+                                        <span class="productReviews">Отзывов: ${products[i].reviews}</span>
+                                    </div>
+                                    <div class="productCardFooter">
+                                        <span class="productPrice">${products[i].productPrice}</span>
+                                        <span class="productCurrency">${products[i].productCurrency}</span>
+                                        <button class="buyBtn">КУПИТЬ</button>
+                                    </div>`;
+          document.querySelector(".conteiner").appendChild(productCard);
+
+          const productCardHeader = document.getElementById(`productCardHeader${i}`);
+          const newBlock = document.getElementById(`newBlock${i}`)
+          if (products[i].new) {
+            newBlock.style.opacity = '1';
+          }
+        }
+      }
+
+      createProductCards();
+    </script>
+  </body>
+</html>
