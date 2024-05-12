@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Comp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+
+        <div class="Container-Header-Panel-Div">
+
+
+            <div class="Panel-Div-Buttons-Container">
+                <div class="Button-Action">Акции</div>
+                <div class="Button-Credit">Кредит</div>
+                <div class="Button-Pay">Оплата и доставка</div>
+                <div class="Button-Helper">Помощь</div>
+                <div class="Button-LaterUser">Скупка Б/У</div>
+                <div class="Button-Contacts">Контакты</div>
+            </div>
+
+
+
+            <div class="Panel-Div-User-Account-Language">
+
+                <div class="Language-Russian-Europa">
+                    RU / EU
+                </div>
+
+                <div class="User-Account">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="Container-Header-Div">
+            
+
+            <div class="Logotype-Container">
+                <picture>
+                    <div class="Logotype"></div>
+                </picture>
+            </div>
+
+
+
+            <div class="Button-Catalog-Set-Container">
+                <div class="Button-Container">
+                    <div class="Button-Container-Set">
+                        <p style="display: flex; align-items: center;">КАТАЛОГ ТОВАРОВ <img style="margin-left: 5px;" src="img/bxl-dropbox.svg"></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="Input-Logotype-Search">
+
+                <div class="Input-Search-Element-Container">
+                    <div class="Input-Container-Header-Div-Set">
+                        <input type="text" placeholder="Поиск">
+                    </div>
+                </div>
+
+                <div class="Search-Logo-Div">
+                    <div class="Logotype-Search"></div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="Number-Administration-Container">
+                <div class="Number-Div">
+                    <div class="Number-Text">
+                        <p>050 065 87 96</p>
+                    </div>
+                    <div id="Arrow-Set-Number" onclick="OpenListenNumbers()"></div>
+
+                </div>
+                <div id="Number-List">
+                    <p>963 878 24 03</p>
+                    <p>876 347 73 47</p>
+                    <p>342 344 23 45</p>
+                    <p>143 545 76 75</p>
+                </div>
+                <div class="Stick-Number">|</div>
+            </div>
+            
+
+
+
+
+            <div class="Container-Ctalog-Save-Products">
+                <div class="Father-Container-Heart">
+                    <div class="Heart-Catalog"></div>
+                </div>
+
+                <div class="Father-Container-Cart">
+                    <div class="Cart-Catalog" id="openBasketBtn"></div>
+                </div>
+                
+            </div>
+
+            <div id="basket">
+                <div class="basketHeader">
+                    <h5>Корзина</h5>
+                    <img id="closeBasket" src="./img/basketCloseImg.svg">
+                </div>
+                <div class="basketMain" id="basketMain">
+                    <!-- <div class="separator"></div> -->
+                    <!-- <div class="basketCard">
+                        <img src="img/Cards-Content/cardImg1.svg" class="basketCardImg">
+                        <span>Процессор Intel Core i5-10400F, Box (BX8070110400F)(BX8070110400F)</span>
+                        <div class="quantityParentBlock">
+                            <div class="minusBlock"><img src="./img/minusImg.svg"></div>
+                            <div class="quantityBlock"><span id="quantity">3</span></div>
+                            <div class="plusBlock"><img src="./img/plusImg.svg"></div>
+                        </div>
+                        <div class="priceBlock">
+                            <span class="price">3600</span>
+                            <span class="currency">руб.</span>
+                        </div>
+                        <div class="deleteBlock">
+                            <img id="deleteBaskedCard" src="./img/deleteImg.svg" alt="">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </header>
+
+
+    <main>
+        <div class="Container-Content-Main-Div">
+    
+            <div class="Scroll-Content-List-left">
+
+                <div class="Container-Scroll-Content-Left">
+
+                    <div id="Div-Computer-Elements" class="Content-Elements-Left-Divs"> 
+                        <div class="Image-And-Text-Content-Left">
+                           <img src="img/Processor.svg">   
+                           <p>Комплектующие ПК</p> 
+                        </div>   
+                        <div class="Arrow-Right-Content-Left-Scroll"></div> 
+                    </div>
+
+
+                    <div id="Div-Computer-Vision" class="Content-Elements-Left-Divs"> 
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Monitor.svg">    
+                            <p>Мониторы<p>
+                        </div>
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+
+
+                    <div id="Div-Computer" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Computer.svg">    
+                            <p>Компьютеры<p> 
+                        </div>                              
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+                    <div id="Div-Notebooks" class="Content-Elements-Left-Divs"> 
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Group 7637.svg">    
+                            <p>Ноутбуки<p> 
+                        </div>
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+
+
+                    <div id="Div-Game-Consoles" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Frame 7643.svg">    
+                            <p>Игровые консоли<p>
+                        </div> 
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+
+
+                    <div id="Div-Elements-for-Notebooks" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Labtop component.svg">    
+                            <p>Комплектующие к ноутбукам<p>
+                        </div> 
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+
+                    <div id="Div-Big-Phone" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Tablet.svg">    
+                            <p>Планшет<p> 
+                        </div> 
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+
+
+                    <div id="Div-Printers-MFU" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Shape.svg">    
+                            <p>Принтеры и МФУ<p>
+                        </div> 
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+                    <div id="Div-Colones-Bus" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Frame 455510.svg">    
+                            <p>Акустические колонки<p> 
+                        </div>    
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+
+                    <div id="Div-Network-System" class="Content-Elements-Left-Divs">
+                        <div class="Image-And-Text-Content-Left">
+                            <img src="img/Web staff.svg">    
+                            <p>Сетевое оборудование<p>
+                        </div> 
+                        <div class="Arrow-Right-Content-Left-Scroll"></div>
+                    </div>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="Slider-Content-Div-Right" style="display: grid; grid-template-rows: 540px; grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; align-items: center; justify-items: center; margin-left: 50px; margin-top: 20px;">
+
+                
+                    <input type="radio" class="slider-btnn" id="1" name="position" checked />
+                    <input type="radio" class="slider-btnn" id="2" name="position" style="margin-left: 15px; margin-right: 15px;"/>
+                    <input type="radio" class="slider-btnn" id="3" name="position" />
+                  <div id="carousel">
+                    <div class="item"><img src="img/Slide-Content/dell-xps-13-ios-computer 1.jpg" width="100%" height="100%" alt=""></div>
+                    <div class="item"><img src="img/Slide-Content/top_igrovih_noutbukov.jpg" width="100%" height="100%" alt=""></div>
+                    <div class="item">Здесь будет ваша реклама</div>
+                  </div>
+
+                  
+
+                  
+
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+                  
+            </div>
+
+
+
+
+        </div>
+
+
+        
+        <div class="Container-Content-Card-Elements-Main">
+            <h1 style="position: relative; left: 60px; bottom: 20px
+            ;">Топ продаж</h1>
+            <div class="conteiner">
+
+            </div>
+
+            
+
+        </div>
+
+
+
+
+        <div class="New-Content-Gamer-Products-Catalog">
+
+          
+               <div class="Line-Gamers-Text-Top" style="    left: 360px;
+               position: relative;
+               top: 22px;
+               width: 76%;
+               height: 3px;
+               background: white;
+           "></div>
+
+               <h1 class="Gamer-Content-H1-Text" style="color: white; font-weight: 400; position: relative; left: 150px;">GAME ZONE</h1>
+
+               <div class="Line-Gamers-Text-Bottom" style="    position: relative;
+               top: -20px;
+               width: 8%;
+               background: white;
+               height: 3px;
+           "></div>
+
+            <div class="Container-Content-Gamers">
+       
+                <div class="Cards-Catalog-Container-Div">
+
+                    <div class="conteiner"></div>
+
+                </div>
+
+
+                <div class="Gamers-Cards-Catalog-Div">
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
